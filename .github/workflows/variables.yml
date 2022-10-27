@@ -1,5 +1,8 @@
 name: variables
 
+env:
+  NGINX_USER: "john"
+  NGINX_PASSWORD: ${{ secrets.PASSWORD }}
 on:
   workflow_dispatch:
 jobs:
@@ -11,8 +14,5 @@ jobs:
         ports: 
           - 4242:80
     steps:
-      - name: Curl localhost
+      - name: Curl localhost        
         run: curl -I http://0.0.0.0:4242/
-        env:
-          NGINX_USER: "john"
-          NGINX_PASSWORD: ${{ secrets.PASSWORD }}
