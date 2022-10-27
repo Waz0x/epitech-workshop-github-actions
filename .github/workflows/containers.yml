@@ -10,18 +10,18 @@ jobs:
       image: alpine
     steps:
       - name: get os version
-        run: os-release
+        run: cat /etc/os-release
   centos:
     runs-on: ubuntu-latest
     container:
       image: centos
     steps:
       - name: get os version
-        run: os-release
+        run: cat /etc/os-release
   fedora:
     runs-on: ubuntu-latest
     container:
       image: fedora
     steps:
       - name: get os version
-        run: os-release
+        run: cat /etc/os-release
