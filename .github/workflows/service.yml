@@ -1,0 +1,16 @@
+name: Services
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 4242:80
+
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl localhost
+        run: curl http://0.0.0.0:4242/
