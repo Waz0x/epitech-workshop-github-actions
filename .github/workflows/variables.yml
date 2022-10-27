@@ -1,0 +1,18 @@
+name: Services
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      nginx:
+        image: mrsquaare/nginx-htpasswd
+        ports: 
+          - 4242:80
+    steps:
+      - name: Curl localhost
+        run: curl -I http://0.0.0.0:4242/
+        env:
+          - NGINX_USER: "john"
+          - NGINX_PASSWORD: ${{ secrets.PASSWORD }}
