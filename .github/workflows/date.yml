@@ -5,10 +5,10 @@ on:
     types: [opened, edited, deleted]
   pull_request:
     types: [ready_for_review]
-  wiki:
+  gollum:
     types: [created, edited, deleted]
   schedule:
-    - cron: '* /1 * * * '
+    - cron: '0 0 1 * *'
 jobs:
   build:
     runs-on: ubuntu-latest
