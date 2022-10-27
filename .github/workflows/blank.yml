@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
+      - name: Print hello world
         run: echo Hello, world!
+      - name: Show date
+        run: date +"%m-%d-%Y %H:%M:%S"
