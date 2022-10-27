@@ -14,5 +14,5 @@ jobs:
       - name: Curl localhost
         run: curl -I http://0.0.0.0:4242/
         env:
-          - NGINX_USER: "john"
-          - NGINX_PASSWORD: ${{ secrets.PASSWORD }}
+          NGINX_USER: "john"
+          NGINX_PASSWORD: ${{ secrets.PASSWORD }}
