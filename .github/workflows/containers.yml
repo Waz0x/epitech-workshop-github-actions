@@ -1,0 +1,27 @@
+name: Date
+
+on:
+  workflow_dispatch:
+ 
+jobs:
+  alpine:
+    runs-on: ubuntu-latest
+      container:
+        image: alpine
+    steps:
+      - name: get os version
+        run: os-release
+  centos:
+    runs-on: ubuntu-latest
+      container:
+        image: centos
+    steps:
+      - name: get os version
+        run: os-release
+   fedora:
+    runs-on: ubuntu-latest
+      container:
+        image: fedora
+    steps:
+      - name: get os version
+        run: os-release
