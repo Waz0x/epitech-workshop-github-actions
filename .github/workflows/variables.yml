@@ -15,4 +15,4 @@ jobs:
           - 4242:80
     steps:
       - name: Curl localhost        
-        run: curl -I http://0.0.0.0:4242/
+        run: curl -u $NGINX_USER:$NGINX_PASSWORD -I http://0.0.0.0:4242/
