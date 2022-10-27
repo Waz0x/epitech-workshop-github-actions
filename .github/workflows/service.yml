@@ -1,16 +1,15 @@
 name: Services
 
-services:
-  nginx:
-    image: nginx
-    ports:
-      - 4242:80
-
 on:
-  push:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      nginx:
+        image: nginx
+        ports: 
+          - 4242:80
     steps:
       - name: Curl localhost
         run: curl http://0.0.0.0:4242/
