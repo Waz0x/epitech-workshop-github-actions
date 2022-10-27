@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Show windows latest version
-        run: Get-ComputerInfo -Property "WindowsCurrentVersion"
+        run: Get-ComputerInfo -Property "OsVersion"
   macos:
     runs-on: macos-latest
     steps:
