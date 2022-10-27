@@ -1,6 +1,7 @@
 name: Date
 
 on:
+  workflow_dispatch:
   issues: 
     types: [opened, edited, deleted]
   pull_request:
