@@ -6,22 +6,22 @@ on:
 jobs:
   alpine:
     runs-on: ubuntu-latest
-      container:
-        image: alpine
+    container:
+      image: alpine
     steps:
       - name: get os version
         run: os-release
   centos:
     runs-on: ubuntu-latest
-      container:
-        image: centos
+    container:
+      image: centos
     steps:
       - name: get os version
         run: os-release
-   fedora:
+  fedora:
     runs-on: ubuntu-latest
-      container:
-        image: fedora
+    container:
+      image: fedora
     steps:
       - name: get os version
         run: os-release
