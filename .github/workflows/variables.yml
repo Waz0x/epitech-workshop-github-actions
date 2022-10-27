@@ -1,4 +1,4 @@
-name: Services
+name: variables
 
 on:
   workflow_dispatch:
