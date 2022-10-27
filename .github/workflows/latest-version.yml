@@ -4,8 +4,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - name: Show ubuntu version
-        run: lsb_release -a
+      - name: Show ubuntu latest version
+        run: lsb_release -r
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Show windows latest version
+        run: Get-ComputerInfo -Property "WindowsCurrentVersion"
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Show mac latest version
+        run: sw_vers -productVersion
